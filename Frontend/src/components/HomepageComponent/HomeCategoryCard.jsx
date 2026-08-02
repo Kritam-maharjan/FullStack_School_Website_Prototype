@@ -41,7 +41,7 @@ const CARDS = [
 
 const HomeCategoryCard = () => {
   return (
-    <section className="bg-gradient-to-b from-cyan-50 via-sky-50 to-cyan-100 py-12 px-6">
+    <section className="bg-gradient-to-b from-cyan-0 via-sky-50 to-cyan-100 py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {CARDS.map((card) => (
           <div

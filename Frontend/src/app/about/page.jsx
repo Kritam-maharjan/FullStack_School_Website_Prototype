@@ -7,6 +7,7 @@ export const metadata = {
 
 export default function About() {
   return (
+    <>
     <div className="bg-gradient-to-blue from-slate-50 via-cyan-50 to-sky-100">
 
       {/* ================= About School ================= */}
@@ -63,7 +64,7 @@ export default function About() {
               alt="School Building"
               width={800}
               height={450}
-              className="rounded-3xl shadow-2xl object-cover w-full h-[450px]"
+              className="rounded-3xl shadow-2xl object-cover w-full h-450px"
             />
 
             <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl px-8 py-5">
@@ -152,11 +153,10 @@ export default function About() {
         </div>
 
       </section>
-
-      <section className="pb-16">
-        <HomeCategoryCard />
-      </section>
-
     </div>
+
+    <HomeCategoryCard />
+      
+    </>
   );
 }
