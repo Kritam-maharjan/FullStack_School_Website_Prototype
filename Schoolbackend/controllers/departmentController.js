@@ -1,14 +1,13 @@
 const DepartmentModel = require('../models/DepartmentModel')
 
 //add department
-exports.addDepartment = async(req, res) => {
-  let departmentExist = await DepartmentModel.findOne({_id: req.body._id})
+exports.addDepartment = async(req, res) => {s
+  let departmentExist = await DepartmentModel.findOne({department_name: req.body.department_name})
   if(departmentExist){
     return res.status(400).json({error: "Department already exists"})
   }
 
   let departmentToAdd = await DepartmentModel.create({
-    _id: req.body._id,
     department_name: req.body.department_name
   })
 

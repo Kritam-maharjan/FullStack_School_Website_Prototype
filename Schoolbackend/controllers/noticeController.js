@@ -8,7 +8,6 @@ exports.addNotice = async (req, res) => {
   }
 
   let noticeToAdd = await NoticeModel.create({
-    _id: req.body._id,
     notice_title: req.body.notice_title,
     date: req.body.date,
     notice_desc: req.body.notice_desc

@@ -2,13 +2,12 @@ const FacultyModel = require('../models/FacultyModel')
 
 //add faculty members
 exports.addFaculty = async(req, res) => {
-  let FacultyExists = await FacultyModel.findOne({_id: req.body._id})
+  let FacultyExists = await FacultyModel.findOne({faculty_name: req.body.faculty_name})
   if(FacultyExists){
     return res.status(400).json({error:"Faculty member already exists"})
   }
  
   let facultyToAdd = await FacultyModel.create({
-    _id: req.body._id,
     faculty_name: req.body.faculty_name,
     department: req.body.department,
     email: req.body.email,

@@ -8,7 +8,6 @@ exports.addNews = async(req, res) =>{
   }
 
   let newsToAdd = await NewsModel.create({
-    _id: req.body._id,
     news_title: req.body.news_title,
     date: req.body.date,
     news_desc: req.body.news_desc,
