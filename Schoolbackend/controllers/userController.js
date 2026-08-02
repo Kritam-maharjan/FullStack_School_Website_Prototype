@@ -24,7 +24,8 @@ exports.register = async (req, res) => {
   emailToRegister = await UserModel.create({
     email: req.body.email,
     password: hashedPassword,
-    department: req.body.department
+    department: req.body.department,
+    role: req.body.role
   })
   if (!emailToRegister) {
     return res.status(400).json({ error: "Couldnot register." })

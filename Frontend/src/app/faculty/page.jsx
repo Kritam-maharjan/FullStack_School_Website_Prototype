@@ -3,5 +3,5 @@ export const metadata = {
 };
 
 export default function Faculty() {
-  return <div>Faculty</div>;
+  return <div className="text-black">Faculty</div>;
 }

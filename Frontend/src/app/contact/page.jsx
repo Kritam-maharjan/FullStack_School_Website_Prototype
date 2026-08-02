@@ -3,5 +3,5 @@ export const metadata = {
 };
 
 export default function Contact() {
-  return <div>Contact</div>;
+  return <div className="text-black">Contact</div>;
 }

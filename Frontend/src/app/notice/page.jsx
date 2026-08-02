@@ -3,5 +3,5 @@ export const metadata = {
 };
 
 export default function Notices() {
-  return <div>Notices</div>;
+  return <div className="text-black">Notices</div>;
 }
